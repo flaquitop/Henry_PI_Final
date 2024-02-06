@@ -1,4 +1,4 @@
-
+![alt text](data\mlops.jpg)
 
 # <h1 align=center> **PROYECTO INDIVIDUAL Nº1 - Machine Learning Operations (MLOps)** </h1>
 
