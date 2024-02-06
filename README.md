@@ -1,13 +1,16 @@
-# Proyecto Individual Nº1 - Machine Learning Operations (MLOps)
+
+
+# <h1 align=center> **PROYECTO INDIVIDUAL Nº1 - Machine Learning Operations (MLOps)** </h1>
+
 
 
 ## Descripción del proyecto:
 
-    Este proyecto individual tiene como objetivo poner en práctica los conocimientos adquiridos en la etapa de labs sobre Machine Learning Operations (MLOps). Se te asignará el rol de un MLOps Engineer y deberás desarrollar un sistema de recomendación de videojuegos para la plataforma Steam.
+### Este proyecto individual tiene como objetivo poner en práctica los conocimientos adquiridos en la etapa de labs sobre Machine Learning Operations (MLOps). Se te asignará el rol de un MLOps Engineer y deberás desarrollar un sistema de recomendación de videojuegos para la plataforma Steam.
 
 ### Contexto:
 
-    Te has unido al equipo de Data Science de Steam y te encomiendan la tarea de crear un sistema de recomendación de videojuegos para mejorar la experiencia de usuario.
+### Te has unido al equipo de Data Science de Steam y te encomiendan la tarea de crear un sistema de recomendación de videojuegos para mejorar la experiencia de usuario.
 
 ### Tareas a realizar:
 
@@ -38,15 +41,15 @@ Eliminar las columnas que no sean necesarias.
 
 Definir las siguientes funciones para los endpoints:
 
-***developer(desarrollador: str):*** Devuelve la cantidad de items y el porcentaje de contenido Free por año según empresa desarrolladora.
+**`developer(desarrollador: str):`** Devuelve la cantidad de items y el porcentaje de contenido Free por año según empresa desarrolladora.
 
-***userdata(User_id: str):*** Devuelve la cantidad de dinero gastado por el usuario, el porcentaje de recomendación en base a reviews.recommend y la cantidad de items.
+**`userdata(User_id: str):`** Devuelve la cantidad de dinero gastado por el usuario, el porcentaje de recomendación en base a reviews.recommend y la cantidad de items.
 
-***UserForGenre(genero: str):*** Devuelve el usuario que acumula más horas jugadas para el género dado y una lista de la acumulación de horas jugadas por año de lanzamiento.
+**`UserForGenre(genero: str):`** Devuelve el usuario que acumula más horas jugadas para el género dado y una lista de la acumulación de horas jugadas por año de lanzamiento.
 
-***best_developer_year(año: int):*** Devuelve el top 3 de desarrolladores con juegos MÁS recomendados por usuarios para el año dado.
+**`best_developer_year(año: int):`** Devuelve el top 3 de desarrolladores con juegos MÁS recomendados por usuarios para el año dado.
 
-***developer_reviews_analysis(desarrolladora: str):*** Devuelve un diccionario con el nombre del desarrollador como llave y una lista con la cantidad total de registros de reseñas de usuarios que se encuentren categorizados con un análisis de sentimiento como valor positivo o negativo.
+**`developer_reviews_analysis(desarrolladora: str):`** Devuelve un diccionario con el nombre del desarrollador como llave y una lista con la cantidad total de registros de reseñas de usuarios que se encuentren categorizados con un análisis de sentimiento como valor positivo o negativo.
 
 
 
