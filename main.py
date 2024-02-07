@@ -5,6 +5,30 @@ df_userforgenre = pd.read_csv('./data/user_for_genre.csv')
 
 app = FastAPI()
 
+@app.get('/')
+def index():
+    return {"message":'Bienvenidos a la API de consulta de Steam Games'}
+
+@app.get("/playtime_genre/{genero}")
+async def playtime_genre(genero: str):
+    try:
+        if f'genres_{genero}_new' not in df_steam_games.columns:
+            raise HTTPException(status_code=404, detail=f"No hay datos para el género {genero}")
+
+        genre_data = df_steam_games[df_steam_games[f'genres_{genero}_new'] == 1]
+        genre_data['user_id'] = genre_data['user_id'].astype('object')
+
+        merged_data = pd.merge(genre_data, df_users_items, on='user_id', how='inner')
+        year_with_most_playtime = merged_data.groupby('año de lanzamiento')['playtime_forever'].sum().idxmax()
+
+        return {"Año de lanzamiento con más horas jugadas para " + genero: int(year_with_most_playtime)}
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error interno: {str(e)}")
+
+
+
+
 @app.get("/UsrForGenre")
 def get_user_for_genre(genero: str = None )-> dict:
     """reune el jugador que mas ah jugado por genero especifico    
@@ -32,19 +56,3 @@ def get_user_for_genre(genero: str = None )-> dict:
 
 
 
-@app.get("/playtime_genre/{genero}")
-async def playtime_genre(genero: str):
-    try:
-        if f'genres_{genero}_new' not in df_steam_games.columns:
-            raise HTTPException(status_code=404, detail=f"No hay datos para el género {genero}")
-
-        genre_data = df_steam_games[df_steam_games[f'genres_{genero}_new'] == 1]
-        genre_data['user_id'] = genre_data['user_id'].astype('object')
-
-        merged_data = pd.merge(genre_data, df_users_items, on='user_id', how='inner')
-        year_with_most_playtime = merged_data.groupby('año de lanzamiento')['playtime_forever'].sum().idxmax()
-
-        return {"Año de lanzamiento con más horas jugadas para " + genero: int(year_with_most_playtime)}
-
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error interno: {str(e)}")

@@ -6,17 +6,17 @@
 
 ## Descripción del proyecto:
 
-### Este proyecto individual tiene como objetivo poner en práctica los conocimientos adquiridos en la etapa de labs sobre Machine Learning Operations (MLOps). Se te asignará el rol de un MLOps Engineer y deberás desarrollar un sistema de recomendación de videojuegos para la plataforma Steam.
+### Este proyecto individual tiene como objetivo poner en práctica los conocimientos adquiridos en la etapa de labs sobre Machine Learning Operations (MLOps). En el cual se me asignó el rol de un MLOps Engineer y deberé desarrollar un sistema de recomendación de videojuegos para la plataforma Steam.
 
 ### Contexto:
 
-### Te has unido al equipo de Data Science de Steam y te encomiendan la tarea de crear un sistema de recomendación de videojuegos para mejorar la experiencia de usuario.
+### Me he unido al equipo de Data Science de Steam y me encomendaron la tarea de crear un sistema de recomendación de videojuegos para mejorar la experiencia de usuarios.
 
 ### Tareas a realizar:
 
-#### Preparación de datos:
+## Preparación de datos:
 
-## Datos
+### Datos
 
 Los datos empleados para este proyecto se encuentran en tres archivos JSON con una estructura anidada:
 
@@ -25,11 +25,7 @@ Los datos empleados para este proyecto se encuentran en tres archivos JSON con u
 - output_steam_games.json: contiene la información de los juegos disponibles en Steam, como el nombre, el género, el precio, etc.
 
 
-Limpiar y transformar los datos proporcionados.
-
-Crear la nueva columna 'sentiment_analysis' mediante análisis de sentimiento con NLP.
-
-Eliminar las columnas que no sean necesarias.
+Previamente a la realización del proyecto, procedí a limpiar y transformar los datos proporcionados en los archivos originales mencionados anteriormente y eliminé las filas y columnas innecesarias para la validación y creación de los DataFrame. Creé una nueva columna 'sentiment_analysis' para el análisis de sentimiento con NLP.
 
 
 
@@ -65,51 +61,19 @@ Definir las siguientes funciones para los endpoints:
 
 # Modelo de aprendizaje automático:
 
-Implementar un sistema de recomendación basado en similitud del coseno o filtro user-item.
-
-Entrenar el modelo de ML.
-
-Definir las funciones recomendacion_juego(id_producto: int) y recomendacion_usuario(id_usuario: int) en la API.
+Implementé un sistema de recomendación basado en similitud del coseno o filtro user-item, entrené el modelo de ML y definí las funciones recomendacion_juego(id_producto: int) y recomendacion_usuario(id_usuario: int) en la API.
 
 
 ### Video:
 
-Crear un video de máximo 7 minutos que muestre:
-
-Presentación del proyecto.
-
-Funcionamiento de las consultas de la API.
-
-Breve explicación del modelo de ML utilizado.
+En mi proyecto se presentará un video explicativo, resumido, mostrando brevemente la estructura del proyecto, el funicionamiento de las consultas de la API y conteniendo una breve explicación del modelo de ML utilizado. 
 
 
-### Recursos:
+### Recursos: 
 
-Dataset: Carpeta con el archivo que requieren ser procesados.
+Para la realización de mi proyecto, se me facilitó: 
+
+Dataset: Carpeta con los archivos a procesar.
 
 Diccionario de datos: Diccionario con algunas descripciones de las columnas disponibles en el dataset.
 
-
-### Criterios de evaluación:
-
-
-Código: Prolijidad, uso de clases y/o funciones, comentarios.
-
-Repositorio: Nombres de archivo adecuados, uso de carpetas, README.md.
-
-Cumplimiento de los requerimientos de aprobación.
-
-Link de acceso al video (alojado en YouTube, Drive o similar).
-
-Diferencia entre MVP y producto completo:
-
-Un MVP cumple con las funcionalidades básicas del sistema.
-Un producto completo incluye funcionalidades adicionales, pruebas exhaustivas y documentación completa.
-
-
-
-Este README.md es una guía inicial. Puedes sugerir modificarlo y ampliarlo según consideres necesario al 
-
-#### email martinmolina@gmail.com
-
-¡Buena suerte!
