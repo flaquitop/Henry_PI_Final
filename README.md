@@ -61,7 +61,7 @@ Definir las siguientes funciones para los endpoints:
 
 # Modelo de aprendizaje automático:
 
-Implementé un sistema de recomendación basado en similitud del coseno o filtro user-item, entrené el modelo de ML y definí las funciones recomendacion_juego(id_producto: int) y recomendacion_usuario(id_usuario: int) en la API.
+Crearemos la columna 'sentiment_analysis' aplicando análisis de sentimiento con NLP, con lo que entrené el modelo de ML y definí las funciones recomendacion_juego(id_producto: int) y recomendacion_usuario(id_usuario: int) en la API.
 
 
 ### Video:
